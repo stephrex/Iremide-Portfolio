@@ -1,0 +1,86 @@
+.image {
+	text-align: center;
+}
+/*.mainBody{
+	position: relative;
+	background: url(laptop.jpg);
+	background-size: cover;
+	width: 100%;
+	height:609px;
+}*/
+
+/*.mainBody::after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    background-color: rgba(0,0,0,0.95);
+	height: 609px;
+}*/
+
+/*.mainBody{
+	background-color: rgba(0, 0, 0, 0.99);
+}*/
+
+.name {
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	color: white;
+}
+
+.status::before {
+	content: "Web Development";
+	animation: animate infinite 10s;
+	padding-left: 10px;
+}
+
+@keyframes animate {
+	0% {
+		content: "Web Development";
+	}
+	50% {
+		content: "Artificial Intelligence";
+	}
+	75% {
+		content: "Machine Learning";
+	}
+}
+.status {
+	display: flex;
+	justify-content: center;
+	font-family: Georgia;
+	font-weight: bold;
+	color: black;
+	margin-bottom: 50px;
+	margin-top: 30px;
+	background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(20,100,100));
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+}
+
+.explore {
+	text-align: center;
+	height: 45px;
+	width: 29%;
+	padding: 1px;
+	background-color: rgb(90,90,90);
+/*	background:  rgba(210, 200, 150, 0.9);*/
+    color: white;
+    transition: all 1s;
+    border: blue;
+    border-radius: 14px;
+}
+
+.explore:hover {
+	cursor: pointer;
+	transform: scale(1.1) ;
+}
+
+@media screen and (max-width: 900px) {
+	.explore{
+		width: 50%;
+	}
+}

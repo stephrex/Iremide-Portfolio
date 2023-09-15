@@ -1,0 +1,110 @@
+.Contact{
+	background:  -webkit-linear-gradient(rgb(255, 255, 255), rgb(200,190,190));
+	-webkit-background-clip: text;
+	font-family: 'Cordova';
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    justify-content: left;
+    margin-left: 20%;
+}
+
+.contact_content {
+	font-family: 'Cordova';
+	font-size: 1.9rem;
+	display: flex;
+	justify-content: left;
+	margin-left: 20%;
+	color: rgba(255,255,255,0.84);
+}
+
+p a {
+	color: 	white;
+}
+.contact_form {
+	font-family:'Cordova';
+	display: flex;
+	justify-content: left;
+	margin-left: 20%;
+}
+
+.form_input{
+	width: 23.9rem;
+	max-width: 100%;
+	margin-right: 15%;
+}
+
+ .graphicons {
+ 	display: flex;
+	justify-content: left;
+	margin-left: 20%;
+}
+
+.graphicon_i{
+	padding-right: 20px;
+}
+
+@media screen and (max-width: 1000px){
+	.Contact{
+		display: flex;
+        justify-content: left;
+        margin-left: 20%;	
+	}
+
+	.contact_content {
+		font-family: 'Cordova';
+		font-size: 1.2rem;
+		display: flex;
+		justify-content: left;
+		margin-left: 20%;
+	}
+
+	.contact_form {
+		font-family:'Cordova';
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (max-width: 885px){
+	.Contact{
+		display: flex;
+        justify-content: left;
+        margin-left: 10%;	
+	}
+
+	.contact_content {
+		font-family: 'Cordova';
+		font-size: 1.2rem;
+		display: flex;
+		justify-content: left;
+		margin-left: 10%;
+	}
+
+	.graphicons {
+	 	display: flex;
+		justify-content: left;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (max-width: 570px){
+	.Contact{
+		display: flex;
+        justify-content: left;
+        margin-left: 5%;	
+	}
+
+	.contact_content {
+		font-family: 'Cordova';
+		font-size: 1.2rem;
+		display: flex;
+		justify-content: left;
+		margin-left: 5%;
+	}
+
+	.graphicons {
+	 	display: flex;
+		justify-content: left;
+		margin-left: 5%;
+	}
+}

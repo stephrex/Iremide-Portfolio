@@ -1,0 +1,56 @@
+.now_heading{
+  display:flex; 
+  justify-content: left;
+  font-family: 'Cordova';
+  margin-bottom: 26px;
+  margin-left: 24%;
+}
+
+.now_heading2{
+	display:flex; 
+    justify-content: left;
+    font-family: 'Cordova';
+    margin-bottom: 48px;
+    margin-left: 24%;
+}
+
+.now_content{
+  	display: flex;
+    justify-content: left;
+    margin-left: 24%;
+    margin-right: 24%;
+    font-size: 1.3rem;
+    font-family: Lucida Fax;
+    font-weight: 300;
+    margin-bottom: 37px;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+@media screen and (max-width: 1500px) {
+    .now_content{
+        display: flex;
+        justify-content: left;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 1.3rem;
+        font-family: Lucida Fax;
+        font-weight: 300;
+        margin-bottom: 37px;
+        color: rgba(255, 255, 255, 0.86);
+    }
+    .now_heading{
+      display:flex; 
+      justify-content: left;
+      font-family: 'Cordova';
+      margin-bottom: 26px;
+      margin-left: 10%;
+    }
+
+    .now_heading2{
+		display:flex; 
+	    justify-content: left;
+	    font-family: 'Cordova';
+	    margin-bottom: 48px;
+	    margin-left: 10%;
+	}
+ }
