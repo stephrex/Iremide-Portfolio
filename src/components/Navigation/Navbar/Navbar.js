@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ExpandedNavbar from './ExpandedNavbar'
 import Contact from '../../.././containers/Contact/Contact';
 import Home from '../../.././containers/Home/Home';
 import About from '../../.././containers/About/About';
@@ -23,19 +24,24 @@ const Navbar = ({onRouteChange, route}) => {
   const onNowButtonClick = () => {
     onRouteChange('now');
   }
-  const [isNavExpanded, setIsNavExpanded] = useState(false)
+  const onNavButtonClick = () => {
+    onRouteChange('nav_expanded');
+  }
 
+  const [isNavExpanded, setIsNavExpanded] = useState(false)
+  // onClick={() => { setIsNavExpanded(!isNavExpanded)}}
+  // onClick={() => { setIsNavExpanded(!isNavExpanded)}} 
   return (
     <div>
       {route ===  'home' ?
         <nav className="navigation">
-            <button className="hamburger" onClick={() => { setIsNavExpanded(!isNavExpanded)}} >
+            <button className="hamburger"  onClick={onNavButtonClick}>
               <div id="menu"></div>
               <div id="menu"></div>
               <div id="menu"></div>
               {/* hamburger svg code... */}
             </button>
-          <div className={ isNavExpanded ? "navigation-menu expanded" : "navigation-menu" } >
+          <div className={ isNavExpanded ? "navigation-menu expanded" : "navigation-menu" }>
             <ul>
               <li onClick={onHomeButtonClick}>
                 <a href={Home} className="dim grow">Home</a>
@@ -58,8 +64,8 @@ const Navbar = ({onRouteChange, route}) => {
         </nav>
       :
         <nav className="navigation">
-          <h1 className='about_name'>Iremide Oloyede</h1>
-          <button className="hamburger" onClick={() => { setIsNavExpanded(!isNavExpanded)}} >
+          <p className='about_name'>Iremide Oloyede</p>
+          <button className="hamburger"  onClick ={onNavButtonClick}>
             <div id="menu"></div>
             <div id="menu"></div>
             <div id="menu"></div>

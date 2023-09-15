@@ -4,6 +4,7 @@ import About from './containers/About/About';
 import Contact from './containers/Contact/Contact';
 import Now from './containers/Now/Now';
 import Blog from './containers/Blog/Blog';
+import ExpandedNavbar from './components/Navigation/Navbar/ExpandedNavbar';
 // import Footer from './components/Footer/Footer'
 import Navigation from './components/Navigation/Navbar/Navbar';
 import 'tachyons';
@@ -23,22 +24,27 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <Navigation onRouteChange={this.onRouteChange} route = {this.state.route}/>
-        {this.state.route === 'home' ? 
-          <Home onRouteChange={this.onRouteChange}/>
-        : (
-          this.state.route === 'about'
-          ? <About onRouteChange={this.onRouteChange}/> 
-          : (
-            this.state.route === 'contact'
-            ? <Contact onRouteChange={this.onRouteChange}/>
+        {this.state.route === 'nav_expanded'
+          ? <ExpandedNavbar onRouteChange={this.onRouteChange}/>
+          : <div>
+            <Navigation onRouteChange={this.onRouteChange} route = {this.state.route}/>
+            {this.state.route === 'home' ? 
+            <Home onRouteChange={this.onRouteChange}/>
             : (
-              this.state.route === 'now'
-              ? <Now onRouteChange = {this.onRouteChange}/>
-              : <Blog onRouteChange = {this.onRouteChange}/>
+              this.state.route === 'about'
+              ? <About onRouteChange={this.onRouteChange}/> 
+              : (
+                this.state.route === 'contact'
+                ? <Contact onRouteChange={this.onRouteChange}/>
+                : (
+                  this.state.route === 'now'
+                  ? <Now onRouteChange = {this.onRouteChange}/>
+                  : <Blog onRouteChange = {this.onRouteChange}/>
+                  )
+                )
               )
-            )
-          )
+            }
+          </div>
         }
       </div>
     )

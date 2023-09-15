@@ -1,0 +1,40 @@
+@media screen and (max-width: 900px) {
+  .navigation-menu3 ul{
+    display: none;
+    margin-top: 10%;
+/*    // stacks the li tags vertically */
+    flex-direction: column;
+/*   // makes menu span full height and width*/
+    width: 97%;
+    height: 100%;
+    background-color: rgba(0,20,50, 0);
+    border-top: 1px solid black;
+    padding: 0;
+  }
+  .navigation-menu3 li{
+/*    // centers link text and strips off margin*/
+    text-align: center;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .navigation-menu3 li a{
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    font-family: Copperplate Gothic Bold;
+    cursor: pointer;
+    color: white;
+/*    // increases the surface area of the anchor tag to span the full width of the menu*/
+    width: 100%;
+    padding: 1.5rem 0;
+    font-size: 2.2rem;
+  }
+
+  .navigation-menu3 li:hover{
+    background: linear-gradient(to right, rgb(0,0,0), grey);
+  }
+  .navigation-menu3.expanded3 ul{
+    display: block;
+  }
+}
