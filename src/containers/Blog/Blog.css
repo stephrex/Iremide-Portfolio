@@ -30,12 +30,9 @@
 }
 
 .blog-image {
-    width: 200px;
-    /* Set the width of the image */
-    height: auto;
-    /* Maintain aspect ratio */
+    width: 11rem;
+    height: 8rem;
     margin-right: 20px;
-    /* Adjust the spacing between image and text */
 }
 
 .blog-info {
@@ -51,14 +48,39 @@
 
 .blog-published-date {
     font-size: 14px;
-    /* Adjust the font size of the published date */
     color: #666;
-    /* Optionally adjust the color */
+}
+
+@media only screen and (max-width: 1000px) {
+    .blog_card_wrapper {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .blog_card_wrapper {
         margin-left: 4%;
         margin-right: 4%;
+    }
+
+    .blog-card {
+        padding: 10px;
+    }
+
+    .blog-image {
+        width: 6rem;
+        height: 5rem;
+        margin-right: 15px;
+    }
+
+    .blog-title {
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+    }
+
+    .blog-published-date {
+        font-size: 0.5rem;
+        color: #666;
     }
 }
