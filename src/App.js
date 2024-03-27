@@ -1,54 +1,41 @@
-import React,{ Component } from 'react';
-import Home from './containers/Home/Home';
+import React, { useState, Component } from 'react';
 import About from './containers/About/About';
 import Contact from './containers/Contact/Contact';
 import Now from './containers/Now/Now';
 import Blog from './containers/Blog/Blog';
 import ExpandedNavbar from './components/Navigation/Navbar/ExpandedNavbar';
-// import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/Footer'
 import Navigation from './components/Navigation/Navbar/Navbar';
 import 'tachyons';
 
-class App extends Component {
-  constructor () {
-    super ();
-    this.state = {
-      route: 'home'
-    }
-  }
-  
-  onRouteChange = (route) => {
-    this.setState({route: route})
-  }
+function App() {
+  const [route, setRoute] = useState('about');
 
-  render () {
-    return (
-      <div className="App">
-        {this.state.route === 'nav_expanded'
-          ? <ExpandedNavbar onRouteChange={this.onRouteChange}/>
-          : <div>
-            <Navigation onRouteChange={this.onRouteChange} route = {this.state.route}/>
-            {this.state.route === 'home' ? 
-            <Home onRouteChange={this.onRouteChange}/>
-            : (
-              this.state.route === 'about'
-              ? <About onRouteChange={this.onRouteChange}/> 
-              : (
-                this.state.route === 'contact'
-                ? <Contact onRouteChange={this.onRouteChange}/>
-                : (
-                  this.state.route === 'now'
-                  ? <Now onRouteChange = {this.onRouteChange}/>
-                  : <Blog onRouteChange = {this.onRouteChange}/>
-                  )
-                )
-              )
-            }
-          </div>
-        }
-      </div>
-    )
+  const onRouteChange = (route) => {
+    setRoute(route)
   }
+  return (
+    <div className="App">
+      <div className='nav_bar' style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
+        {(route === 'nav_expanded') ? (
+          <ExpandedNavbar onRouteChange={onRouteChange} />
+        ) : <Navigation onRouteChange={onRouteChange} route={route} />}
+      </div>
+      {route === 'about' && (
+        <About onRouteChange={onRouteChange} />
+      )}
+      {route === 'contact' && (
+        <Contact onRouteChange={onRouteChange} />
+      )}
+      {route === 'now' && (
+        <Now onRouteChange={onRouteChange} />
+      )}
+      {route === 'blog' && (
+        <Blog onRouteChange={onRouteChange} />
+      )}
+      <Footer />
+    </div >
+  )
 }
 
 export default App;

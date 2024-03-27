@@ -1,16 +1,16 @@
-body{
+body {
     color: white;
 }
 
-.about_heading{
-  display:flex; 
-  justify-content: left;
-  font-family: 'Cordova';
-  margin-bottom: 48px;
-  margin-left: 24%;
+.about_heading {
+    display: flex;
+    justify-content: left;
+    font-family: 'Cordova';
+    margin-bottom: 48px;
+    margin-left: 24%;
 }
 
-.about_content{
+.about_content {
     display: flex;
     justify-content: left;
     margin-left: 24%;
@@ -22,17 +22,36 @@ body{
     color: rgba(255, 255, 255, 0.86);
 }
 
-.nowClick {
-    text-decoration: underline;
-    color:rgb(50, 50, 255);
+.skill {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-left: 24%;
+    margin-right: 24%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 37px;
 }
 
-.nowClick:hover{
-    cursor: pointer;
+.skill_2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.9em;
+    font-weight: 400;
+    margin-left: 25%;
+    margin-right: 24%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 13px;
+}
+
+.skill_content {
+    margin-left: 27%;
+    margin-right: 24%;
+    font-size: 1.22em;
 }
 
 @media screen and (max-width: 1500px) {
-    .about_content{
+    .about_content {
         display: flex;
         justify-content: left;
         margin-left: 10%;
@@ -43,11 +62,34 @@ body{
         margin-bottom: 37px;
         color: rgba(255, 255, 255, 0.86);
     }
-    .about_heading{
-      display:flex; 
-      justify-content: left;
-      font-family: 'Cordova';
-      margin-bottom: 48px;
-      margin-left: 10%;
+
+    .about_heading {
+        display: flex;
+        justify-content: left;
+        font-family: 'Cordova';
+        margin-bottom: 48px;
+        margin-left: 10%;
+    }
+
+    .skill {
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        justify-content: left;
+        margin-bottom: 37px;
+    }
+
+    .skill_2 {
+        margin-left: 12%;
+        margin-right: 10%;
+        display: flex;
+        justify-content: left;
+        margin-bottom: 37px;
+    }
+
+    .skill_content {
+        margin-left: 14%;
+        margin-right: 10%;
+        font-size: 1.1em;
     }
 }

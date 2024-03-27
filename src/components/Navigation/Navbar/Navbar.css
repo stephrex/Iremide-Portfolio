@@ -1,5 +1,5 @@
 .navigation {
-  height: 150px;
+  height: 6rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -7,31 +7,28 @@
   padding: 0.5rem 0rem;
   background-color: #151719;
   color: black;
-/*  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);*/
+  padding-top: 2.8rem;
+  /*  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);*/
 }
 
 .navigation-menu {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.navigation-menu2{
   display: flex;
   justify-content: flex-end;
-  margin-left: auto;
 }
 
-.navigation-menu ul, .navigation-menu2 ul{
+.navigation-menu ul {
   display: flex;
   padding: 0;
 }
-.navigation-menu li, .navigation-menu2 li{
-/*  // removes default disc bullet for li tags and applies margin to left & right side*/
+
+.navigation-menu li {
+  /*  // removes default disc bullet for li tags and applies margin to left & right side*/
   list-style-type: none;
   margin: 0 1rem;
 }
-.navigation-menu li a, .navigation-menu2 li a{
-/*  // increases the surface area of the anchor tag to span more than just the anchor text*/
+
+.navigation-menu li a {
+  /*  // increases the surface area of the anchor tag to span more than just the anchor text*/
   text-decoration: none;
   display: block;
   font-weight: 600;
@@ -42,15 +39,7 @@
   cursor: pointer;
 }
 
-.about_name{
-  color: white;
-  margin-left: 3%;
-  font-weight: 600;
-  font-size: 2.2rem;
-  font-family: Copperplate Gothic Bold;
-}
-
-#menu{
+#menu {
   width: 1.8rem;
   height: 3px;
   background-color: white;
@@ -70,48 +59,58 @@
     width: 40px;
     padding: 0.5rem;
     border-radius: 50%;
-    background-color: rgba( 10, 0,150, 0);
+    background-color: rgba(10, 0, 150, 0);
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
-  /*// positions the icon to the right and center aligns it vertically*/
+    /*// positions the icon to the right and center aligns it vertically*/
     position: absolute;
     top: 47%;
     right: 20px;
     transform: translateY(-50%);
   }
 
-  .navigation-menu ul, .navigation-menu2 ul{
+  .navigation-menu ul,
+  .navigation-menu2 ul {
     display: none;
     position: absolute;
     top: 65%;
     right: 0;
-    left:  0;
-/*    // stacks the li tags vertically */
+    left: 0;
+    /*    // stacks the li tags vertically */
     flex-direction: column;
-/*   // makes menu span full height and width*/
+    /*   // makes menu span full height and width*/
     width: 100%;
-    height:  calc(100vh - 72px);
-    background-color: rgba(0,20,50, 0.9);
+    height: calc(100vh - 72px);
+    background-color: rgba(0, 20, 50, 0.9);
     border-top: 1px solid black;
   }
-  .navigation-menu li, .navigation-menu2 li{
-/*    // centers link text and strips off margin*/
+
+  .navigation-menu li,
+  .navigation-menu2 li {
+    /*    // centers link text and strips off margin*/
     text-align: center;
     margin: 0;
   }
-  .navigation-menu li a, .navigation-menu2 li a{
+
+  .navigation-menu li a,
+  .navigation-menu2 li a {
     color: white;
-/*    // increases the surface area of the anchor tag to span the full width of the menu*/
+    /*    // increases the surface area of the anchor tag to span the full width of the menu*/
     width: 100%;
     padding: 1.5rem 0;
     font-size: 2.2rem;
   }
-  .navigation-menu li:hover, .navigation-menu2 li:hover{
-    background: linear-gradient(to right, rgb(0,0,0), rgb(255, 0, 136));
+
+  .navigation-menu li:hover,
+  .navigation-menu2 li:hover {
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 0, 136));
   }
-  .navigation-menu.expanded ul, .navigation-menu2.expanded ul{
+
+  .navigation-menu.expanded ul,
+  .navigation-menu2.expanded ul {
     display: block;
   }
+
   .about_name {
     color: white;
     margin-left: 2%;
@@ -121,12 +120,12 @@
   }
 }
 
-@media screen and (max-width: 345px){
+@media screen and (max-width: 345px) {
   .about_name {
     font-size: 1.4rem;
   }
 
-  #menu{
+  #menu {
     width: 1.5rem;
     height: 0.1rem;
     margin: 4px 0;
@@ -140,10 +139,11 @@
   }
 }
 
-@media screen and (max-width: 230px){
-   .about_name {
-      font-size: 1.2rem;
+@media screen and (max-width: 230px) {
+  .about_name {
+    font-size: 1.2rem;
   }
+
   .hamburger {
     position: absolute;
     top: 46%;

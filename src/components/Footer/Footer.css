@@ -1,0 +1,145 @@
+.footer {
+    background-color: #3333338d;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 20px;
+    text-align: center;
+    margin-top: 5em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 8.3em;
+    height: 5em;
+    margin-right: 20px;
+}
+
+.profile-text h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.profile-text p {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.btn-contact {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #0056b3;
+    color: rgba(240, 248, 255, 0.744);
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-link {
+    margin: 0 10px;
+}
+
+.icon {
+    color: #fff;
+    font-size: 24px;
+}
+
+.icon:hover {
+    color: #007bff;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .profile-pic img {
+        width: 5em;
+        height: 3em;
+        margin-right: 29px;
+    }
+
+    .footer-info {
+        margin-right: 20px;
+    }
+
+    .profile-text h2 {
+        font-size: 1em;
+    }
+
+    .profile-text p {
+        font-size: 0.6em;
+    }
+
+    .btn-contact {
+        font-size: 0.7em;
+        padding: 5px 10px;
+    }
+
+    .icon-link {
+        margin: 0 7px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .profile-pic img {
+        width: 3.5em;
+        height: 2em;
+        margin-right: 20px;
+    }
+
+    .footer-info {
+        margin-right: 20px;
+    }
+
+    .profile-text h2 {
+        font-size: 0.5em;
+    }
+
+    .profile-text p {
+        font-size: 0.3em;
+        margin-bottom: 0px;
+    }
+
+    .btn-contact {
+        font-size: 0.3em;
+        padding: 2px 5px;
+        margin-top: 0px;
+    }
+
+    .icon {
+        font-size: 15px;
+    }
+}
