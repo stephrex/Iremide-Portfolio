@@ -39,8 +39,8 @@ const Navbar = ({ onRouteChange, route }) => {
   return (
     <div className='sticky_nav'>
       <nav className="navigation">
-        <div className="pa4 image">
-          <img alt='Pic Of Iremide' className="br-100 h3 w3 dib" src={IremidePic} />
+        <div className="pa4">
+          <img alt='Pic Of Iremide' className="br-100 dib image" src={IremidePic} />
         </div>
         <button className="hamburger" onClick={onNavButtonClick}>
           <div id="menu"></div>
